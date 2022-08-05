@@ -16,6 +16,7 @@ import org.openqa.selenium.support.ui.Select;
 import java.io.File;
 import java.time.Duration;
 import org.apache.commons.io.FileUtils;
+import org.testng.Assert;
 
 public class SearchSortFilterTest {
   private WebDriver driver;
@@ -44,6 +45,8 @@ public class SearchSortFilterTest {
     new Select(driver.findElement(By.id("sort_by"))).selectByVisibleText("Price (High to Low)");
     driver.findElement(By.linkText("Price")).click();
     driver.findElement(By.xpath("//div[@id='accordion-filter_collapse-4']/div/span[4]/div/label/span[2]")).click();
+    
+    Assert.assertTrue(driver.getTitle().contains("dining set"));
   }
 
   @AfterClass(alwaysRun = true)

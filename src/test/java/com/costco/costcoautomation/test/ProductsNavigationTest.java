@@ -13,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import java.io.File;
 import java.time.Duration;
+import junit.framework.Assert;
 import org.apache.commons.io.FileUtils;
 
 public class ProductsNavigationTest {
@@ -42,6 +43,8 @@ public class ProductsNavigationTest {
     driver.findElement(By.xpath("//div[@id='accordion-filter_collapse-4']/div/span/div/label")).click();
     driver.findElement(By.linkText("Brand")).click();
     driver.findElement(By.xpath("//div[@id='accordion-filter_collapse-5']/div/span[4]/div/label")).click();
+    
+    Assert.assertTrue(driver.getTitle().contains("French Door Refrigerators"));
   }
 
   @AfterClass(alwaysRun = true)
