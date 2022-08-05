@@ -15,7 +15,7 @@ import java.io.File;
 import java.time.Duration;
 import org.apache.commons.io.FileUtils;
 
-public class SearchAutomationTest {
+public class ProductsNavigationTest {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
