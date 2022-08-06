@@ -52,6 +52,8 @@ public class CostcoLoginTest {
     driver.get("https://www.costco.com/");
     
     WebElement e = driver.findElement(By.id("header_sign_in"));
+    System.out.println("isDisplayed : " + e.isDisplayed());
+    System.out.println("isEnabled : " + e.isEnabled());
     
     WebDriverWait t = new WebDriverWait(driver, Duration.ofSeconds(30)); 
     t.until(ExpectedConditions.visibilityOf(e));  
