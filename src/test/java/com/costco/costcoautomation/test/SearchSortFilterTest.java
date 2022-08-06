@@ -35,7 +35,7 @@ public class SearchSortFilterTest {
   }
 
   @Test
-  public void test8() throws Exception {
+  public void filterTest() throws Exception {
     driver.get("https://www.costco.com/");
     driver.findElement(By.id("search-field")).click();
     driver.findElement(By.id("search-field")).clear();

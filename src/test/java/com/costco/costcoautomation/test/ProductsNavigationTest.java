@@ -33,7 +33,7 @@ public class ProductsNavigationTest {
   }
 
   @Test
-  public void searchTest() throws Exception {
+  public void navigationTest() throws Exception {
     driver.get("https://www.costco.com/appliances.html");
     driver.findElement(By.xpath("//img[contains(@src,'https://mobilecontent.costco.com/live/resource/img/static-us-tiles/refrigerators.jpg')]")).click();
     driver.get("https://www.costco.com/refrigerators.html");
